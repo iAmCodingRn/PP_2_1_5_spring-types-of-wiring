@@ -1,12 +1,14 @@
 package koschei.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Ocean1 {
 
     @Autowired
+    @Qualifier("island2") // getIsland and island2 can be autowired so we need to make sure which is to be autowired
     private Island2 island;
 
     @Override
